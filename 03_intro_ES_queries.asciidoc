@@ -1,0 +1,5 @@
+In this lesson you will better understand the _search endpoint and ...
+Watch the video below to learn about it.
+
+As you already know by now, Elasticsearch provides RESTful APIs.
+The `_search` endpoint is the one used to

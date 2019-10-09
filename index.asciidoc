@@ -1,0 +1,35 @@
+:docinfo: shared
+:last-update-label!:
+:stylesdir: includes/
+:stylesheet: training.css
+:imagesdir: images/
+:toc:
+:toc-title:
+:toclevels: 1
+
+= Elasticsearch Queries in 15 minutes
+
+'''
+
+== Welcome
+
+include::01_welcome.asciidoc[]
+
+== Setup Elasticsearch and Kibana
+
+
+include::02_setup_ES_KB.asciidoc[]
+
+== Introduction to the Elasticsearch Query DSL
+
+include::03_intro_ES_queries.asciidoc[]
+
+== Full-Text and Terms Query
+
+include::04_match_boolean_queries.asciidoc[]
+
+== Next Steps
+
+include::05_next_steps.asciidoc[]
+
+'''
