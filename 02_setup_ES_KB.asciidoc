@@ -1,2 +1,5 @@
-In this lesson you will get Elasticsearch and Kibana running. This was already
-covered in a previous module. Watch the video below to recap how to do it.
+In this lesson you will get Elasticsearch and Kibana running, which was already
+covered in a previous module.
+Watch the video below to recap how to do it.
+
+video::setup_ES_KB.mp4[]
