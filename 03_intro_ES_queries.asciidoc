@@ -1,5 +1,66 @@
-In this lesson you will better understand the _search endpoint and ...
-Watch the video below to learn about it.
-
 As you already know by now, Elasticsearch provides RESTful APIs.
-The `_search` endpoint is the one used to
+The `_search` endpoint is the one used to explore the data in Elasticsearch.
+In this lesson you will better understand the `_search` endpoint and the
+basic query functionalities.
+
+There are two main features that can be accessed using the `search` endpoint:
+queries and aggregations.
+While queries allow you to find documents, aggregations allow you to
+summarize the data contained in those documents.
+Next, we will focus on the queries basic functionalities.
+
+video::03_intro_ES_queries.mp4[]
+
+Now, go back to your Katacoda lab to practice the query concepts you learned.
+
+////
+Audio transcript:
+
+As you open the Kibana Console, the default command is a "match_all" query.
+The command consists of the HTTP verb followed by the endpoint,
+in this case a GET followed by "_search".
+This "search" request contains a body composed by a "query" object with a
+"match_all" object in it.
+
+As you execute the command using either ctrl+enter or the play button, Kibana
+Console will show you the response.
+The response consists of some metadata that we are no interested right now,
+the total number of documents that matched, in this case more than 10k,
+and the first 10 documents that match the query, also known as top hits.
+
+---
+
+The default Kibana console request is searching all indices in Elasticsearch.
+You can see that while some returned documents belong to the ".kibana_1" index,
+other documents belong to the "recipes" index.
+
+In most cases, you want to search specific indices instead of all the indices
+in Elasticsearch.
+You can do that by defining the index name before the "_search" endpoint.
+Now, if I run the query, all the documents returned belong to the "recipes"
+index.
+
+---
+
+When exploring a dataset or learning Elasticsearch, one interesting thing to
+do is to know the exact number of hits.
+So, the response instead of containing "greater than or equal to 10 thousand"
+will  contain the exact number of hits. Calculating the exact number of hits,
+adds a performance overhead.
+
+Elasticsearch has a parameter named "track_total_hits", that if set to true
+calculates the exact number of hits, in this case 39774.
+Notice that even though 39774 documents are hits, only the top 10 are returned.
+
+---
+
+Elasticsearch allows you to define the number of returned documents by using
+the "size" parameter.
+In this case, you can easily set it to 3, so only 3 documents are actually
+returned in the response.
+
+Another option is to paginate through the results. You can use the "from"
+parameter, and set it to 3, to get the next 3 documents, and then you could
+update the from to 6 to get next next three documents in the response.
+
+////

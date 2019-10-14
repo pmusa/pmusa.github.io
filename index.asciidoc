@@ -24,7 +24,7 @@ include::02_setup_ES_KB.asciidoc[]
 
 include::03_intro_ES_queries.asciidoc[]
 
-== Full-Text and Terms Query
+== Match and Boolean Queries
 
 include::04_match_boolean_queries.asciidoc[]
 

@@ -8,4 +8,33 @@ query DSL, which is vast and can be quite complex.
 Also, even though this module contains code that downloads, starts, and load
 data into Elasticsearch, this is not the focus of this course.
 
-video::test.mov[]
+video::01_welcome.mp4[]
+
+////
+Audio transcript:
+
+Hi everyone, my name is Pablo and today I am going to walk you through
+Elasticsearch queries in 15 minutes.
+
+In this module you'll learn how to write and execute queries in Elasticsearch.
+This module is designed to *introduce* you to the Elasticsearch query DSL and
+to demonstrate how you can use Elasticsearch to query your data.
+
+This module is divided in four lessons:
+
+First, "Setup Elasticsearch and Kibana".
+In this lesson you will quickly recap how to get started with the Elastic
+Stack.
+
+The second lesson is "Introduction to Query DSL", in which you will better
+understand the `_search` endpoint and get started with queries.
+
+Next, you will learn about "Match" and "Boolean" queries, the bread and
+butter of Elasticsearch queries.
+
+Finally, in the "Next Steps" lesson, you will see some more advanced and
+interesting queries that you might want to learn.
+
+Are you ready? Next, you will setup Elasticsearch and Kibana.
+
+////

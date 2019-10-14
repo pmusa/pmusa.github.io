@@ -2,4 +2,34 @@ In this lesson you will get Elasticsearch and Kibana running, which was already
 covered in a previous module.
 Watch the video below to recap how to do it.
 
-video::setup_ES_KB.mp4[]
+video::02_setup_ES_KB.mp4[]
+
+Now, click
+link:https://katacoda.com/pmusa/scenarios/es_queries[here, window=_blank]
+to start your lab.
+
+////
+Audio transcript:
+
+To run Elasticsearch, all you need to do is:
+- download the binary
+- extract the package
+- and execute it
+Then, you can check if Elasticsearch is up and running.
+
+There are multiple ways to load data into Elasticsearch.
+Using the "curl" command and the "_bulk" API you can load all documents
+from a file with the "bulk" format.
+Then, you can use a "count" to check the number of total documents.
+
+Finally, to run Kibana, all you need to do is download the binary, extract
+the package and execute it.
+Because you want to access Kibana from all external computers, you should bind
+it to "0.0.0.0".
+This will setup Kibana to listen to all IP addresses on the local machine.
+
+All set, Elasticsearch and Kibana running and the dataset is loaded.
+Now, you can access the Kibana Console and start writing queries.
+
+////
+
