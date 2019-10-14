@@ -1,1 +1,79 @@
-This is the next steps lesson
+Congratulations, you now understand the fundamentals of the Elasticsearch
+query DSL.
+As next steps, you should explore the following queries:
+
+* The `link:https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-range-query.html[range, window=_blank]` query allows you to
+find documents that contains terms within a provided range.
+For example, if each recipe had a `rating`, you could add a clause to only
+return recipes in which `rating` is greater than or equal to `4`.
++
+[source]
+----
+GET recipes/_search
+{
+  "query": {
+    "range": {
+      "rating": {
+        "gte": 4
+      }
+    }
+  }
+}
+----
+
+* The `link:https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-match-query-phrase.html[match_phrase, window=_blank]`
+query allows you to find documents that contain multiple terms in the same
+order.
+For example, you could search for `olive oil` in the ingredients and only get
+back documents that contain `olive oil` as an ingredient (not only `olive`
+or `oil`). 
++
+[source]
+----
+GET recipes/_search
+{
+  "query": {
+    "match_phrase": {
+      "ingredients": "olive oil"
+    }
+  }
+}
+----
+  
+* The `link:https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-mlt-query.html[more_like_this, window=_blank]`
+query allows you to find documents that are "like" a given set of documents.
+For example, you could find recipes that are similar to other recipes you
+like.
++
+[source]
+----
+# imagine you like both recipes 152 and 28322
+GET recipes/_doc/152
+GET recipes/_doc/28322
+
+GET recipes/_search
+{
+  "query": {
+    "more_like_this": {
+      "fields": [
+        "ingredients"
+      ],
+      "like": [
+        {
+          "_index": "recipes",
+          "_id": "152"
+        },
+        {
+          "_index": "recipes",
+          "_id": "28322"
+        }
+      ],
+      "min_term_freq": 1,
+      "max_query_terms": 12
+    }
+  }
+}
+----
+
+If you are also interested in slicing and dicing your data, you should take
+the link:https://pmusa.github.io[Elasticsearch Aggregations in 15 minutes, window=_blank] course.
