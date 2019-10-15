@@ -1,8 +1,8 @@
-In this lesson you will get Elasticsearch and Kibana running, which was already
-covered in a previous module.
+In this lesson you will get Elasticsearch and Kibana running, which was
+already covered in a previous module.
 Watch the video below to recap how to do it.
 
-video::02_setup_ES_KB.mp4[]
+video::01_setup_ES_KB.mp4[width=80%]
 
 Now, click
 link:https://katacoda.com/pmusa/scenarios/es_queries[here, window=_blank]

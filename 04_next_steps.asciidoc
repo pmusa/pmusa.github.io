@@ -3,7 +3,7 @@ query DSL.
 As next steps, you should explore the following queries:
 
 * The `link:https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-range-query.html[range, window=_blank]` query allows you to
-find documents that contains terms within a provided range.
+find documents that contain terms within a provided range.
 For example, if each recipe had a `rating`, you could add a clause to only
 return recipes in which `rating` is greater than or equal to `4`.
 +
@@ -76,4 +76,4 @@ GET recipes/_search
 ----
 
 If you are also interested in slicing and dicing your data, you should take
-the link:https://pmusa.github.io[Elasticsearch Aggregations in 15 minutes, window=_blank] course.
+the link:#[Elasticsearch Aggregations in 15 Minutes] course.

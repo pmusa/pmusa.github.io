@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.7.1">
-<title>Elasticsearch Queries in 15 minutes</title>
+<title>Elasticsearch Queries in 15 Minutes</title>
 <style>
 .header {
   font-size: 36px;
@@ -336,15 +336,15 @@ table.relevance {
 </head>
 <body class="article">
 <div id="header">
-<h1>Elasticsearch Queries in 15 minutes</h1>
+<h1>Elasticsearch Queries in 15 Minutes</h1>
 <div id="toc" class="toc">
 <div id="toctitle"></div>
 <ul class="sectlevel1">
 <li><a href="#_welcome">Welcome</a></li>
-<li><a href="#_setup_elasticsearch_and_kibana">Setup Elasticsearch and Kibana</a></li>
-<li><a href="#_introduction_to_the_elasticsearch_query_dsl">Introduction to the Elasticsearch Query DSL</a></li>
-<li><a href="#_full_text_and_terms_query">Full-Text and Terms Query</a></li>
-<li><a href="#_next_steps">Next Steps</a></li>
+<li><a href="#_setup_elasticsearch_and_kibana">1. Setup Elasticsearch and Kibana</a></li>
+<li><a href="#_introduction_to_the_elasticsearch_query_dsl">2. Introduction to the Elasticsearch Query DSL</a></li>
+<li><a href="#_match_and_boolean_queries">3. Match and Boolean Queries</a></li>
+<li><a href="#_next_steps">4. Next Steps</a></li>
 </ul>
 </div>
 </div>
@@ -358,20 +358,21 @@ table.relevance {
 <h2 id="_welcome">Welcome</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Welcome to Elasticsearch Queries in 15 minutes.
-In this module you&#8217;ll learn how to write and execute queries in Elasticsearch.
+<p>Welcome to <strong>Elasticsearch Queries in 15 Minutes</strong>.
+In this module you will learn how to write and execute queries in
+Elasticsearch.
 This module  is designed to <strong>introduce</strong> you to the Elasticsearch query DSL and
 to demonstrate how you can use Elasticsearch to query your data.</p>
 </div>
 <div class="paragraph">
 <p>Due to time constraints, this course is an <strong>introduction</strong> to the Elasticsearch
 query DSL, which is vast and can be quite complex.
-Also, even though this module contains code that downloads, starts, and load
+Also, even though this module contains code that downloads, starts, and loads
 data into Elasticsearch, this is not the focus of this course.</p>
 </div>
 <div class="videoblock">
 <div class="content">
-<video src="images/01_welcome.mp4" controls>
+<video src="images/00_welcome.mp4" width="70%" controls>
 Your browser does not support the video tag.
 </video>
 </div>
@@ -379,16 +380,16 @@ Your browser does not support the video tag.
 </div>
 </div>
 <div class="sect1">
-<h2 id="_setup_elasticsearch_and_kibana">Setup Elasticsearch and Kibana</h2>
+<h2 id="_setup_elasticsearch_and_kibana">1. Setup Elasticsearch and Kibana</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>In this lesson you will get Elasticsearch and Kibana running, which was already
-covered in a previous module.
+<p>In this lesson you will get Elasticsearch and Kibana running, which was
+already covered in a previous module.
 Watch the video below to recap how to do it.</p>
 </div>
 <div class="videoblock">
 <div class="content">
-<video src="images/02_setup_ES_KB.mp4" controls>
+<video src="images/01_setup_ES_KB.mp4" width="80%" controls>
 Your browser does not support the video tag.
 </video>
 </div>
@@ -401,24 +402,25 @@ to start your lab.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_introduction_to_the_elasticsearch_query_dsl">Introduction to the Elasticsearch Query DSL</h2>
+<h2 id="_introduction_to_the_elasticsearch_query_dsl">2. Introduction to the Elasticsearch Query DSL</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>As you already know by now, Elasticsearch provides RESTful APIs.
-The <code>_search</code> endpoint is the one used to explore the data in Elasticsearch.
+<p>As you already know from previous modules, Elasticsearch provides RESTful
+APIs.
+The <code>_search</code> endpoint is the one used to explore data in Elasticsearch.
 In this lesson you will better understand the <code>_search</code> endpoint and the
 basic query functionalities.</p>
 </div>
 <div class="paragraph">
-<p>There are two main features that can be accessed using the <code>search</code> endpoint:
+<p>There are two main features that can be accessed using the <code>_search</code> endpoint:
 queries and aggregations.
 While queries allow you to find documents, aggregations allow you to
 summarize the data contained in those documents.
-Next, we will focus on the queries basic functionalities.</p>
+Next, we will focus on the basic functionalities of queries.</p>
 </div>
 <div class="videoblock">
 <div class="content">
-<video src="images/03_intro_ES_queries.mp4" controls>
+<video src="images/02_intro_ES_queries.mp4" width="80%" controls>
 Your browser does not support the video tag.
 </video>
 </div>
@@ -429,18 +431,118 @@ Your browser does not support the video tag.
 </div>
 </div>
 <div class="sect1">
-<h2 id="_full_text_and_terms_query">Full-Text and Terms Query</h2>
+<h2 id="_match_and_boolean_queries">3. Match and Boolean Queries</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This is the full text lesson,</p>
+<p>The match query and the boolean query are the bread and butter of
+Elasticsearch queries.
+Watch the video below to better understand how they work and to learn how
+to write your own queries.</p>
+</div>
+<div class="videoblock">
+<div class="content">
+<video src="images/03_match_boolean_queries.mp4" width="80%" controls>
+Your browser does not support the video tag.
+</video>
+</div>
+</div>
+<div class="paragraph">
+<p>Next, go to your lab tab to improve your knowledge about the <code>match</code> and
+<code>bool</code> queries.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_next_steps">Next Steps</h2>
+<h2 id="_next_steps">4. Next Steps</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This is the next steps lesson</p>
+<p>Congratulations, you now understand the fundamentals of the Elasticsearch
+query DSL.
+As next steps, you should explore the following queries:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <code><a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-range-query.html" target="_blank" rel="noopener">range</a></code> query allows you to
+find documents that contain terms within a provided range.
+For example, if each recipe had a <code>rating</code>, you could add a clause to only
+return recipes in which <code>rating</code> is greater than or equal to <code>4</code>.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>GET recipes/_search
+{
+  "query": {
+    "range": {
+      "rating": {
+        "gte": 4
+      }
+    }
+  }
+}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>The <code><a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-match-query-phrase.html" target="_blank" rel="noopener">match_phrase</a></code>
+query allows you to find documents that contain multiple terms in the same
+order.
+For example, you could search for <code>olive oil</code> in the ingredients and only get
+back documents that contain <code>olive oil</code> as an ingredient (not only <code>olive</code>
+or <code>oil</code>).</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>GET recipes/_search
+{
+  "query": {
+    "match_phrase": {
+      "ingredients": "olive oil"
+    }
+  }
+}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>The <code><a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-mlt-query.html" target="_blank" rel="noopener">more_like_this</a></code>
+query allows you to find documents that are "like" a given set of documents.
+For example, you could find recipes that are similar to other recipes you
+like.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code># imagine you like both recipes 152 and 28322
+GET recipes/_doc/152
+GET recipes/_doc/28322
+
+GET recipes/_search
+{
+  "query": {
+    "more_like_this": {
+      "fields": [
+        "ingredients"
+      ],
+      "like": [
+        {
+          "_index": "recipes",
+          "_id": "152"
+        },
+        {
+          "_index": "recipes",
+          "_id": "28322"
+        }
+      ],
+      "min_term_freq": 1,
+      "max_query_terms": 12
+    }
+  }
+}</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If you are also interested in slicing and dicing your data, you should take
+the <a href="#">Elasticsearch Aggregations in 15 Minutes</a> course.</p>
 </div>
 <hr>
 </div>

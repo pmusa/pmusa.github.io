@@ -1,15 +1,16 @@
-As you already know by now, Elasticsearch provides RESTful APIs.
-The `_search` endpoint is the one used to explore the data in Elasticsearch.
+As you already know from previous modules, Elasticsearch provides RESTful
+APIs.
+The `_search` endpoint is the one used to explore data in Elasticsearch.
 In this lesson you will better understand the `_search` endpoint and the
 basic query functionalities.
 
-There are two main features that can be accessed using the `search` endpoint:
+There are two main features that can be accessed using the `_search` endpoint:
 queries and aggregations.
 While queries allow you to find documents, aggregations allow you to
 summarize the data contained in those documents.
-Next, we will focus on the queries basic functionalities.
+Next, we will focus on the basic functionalities of queries.
 
-video::03_intro_ES_queries.mp4[]
+video::02_intro_ES_queries.mp4[width=80%]
 
 Now, go back to your Katacoda lab to practice the query concepts you learned.
 

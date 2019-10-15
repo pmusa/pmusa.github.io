@@ -1,0 +1,52 @@
+The match query and the boolean query are the bread and butter of
+Elasticsearch queries.
+Watch the video below to better understand how they work and to learn how
+to write your own queries.
+
+video::03_match_boolean_queries.mp4[width=80%]
+
+Next, go to your lab tab to improve your knowledge about the `match` and
+`bool` queries.
+
+////
+Audio transcript:
+
+* this is more of a live demo style video than a recorded script
+* the following should be used as a guide
+
+The `match` query is one of the main queries in Elasticsearch.
+It can be used to find documents that contain one or more terms in a field.
+For example, imagine you want to find all recipes that contain `banana`.
+You should start writing a get request to the `recipes` index and the
+`_search` endpoint.
+Then you can type `query` and use the auto-completion.
+Inside the `query` object you can start typing `match` and again use
+the auto-completion.
+Now, you should define the "field", which is "ingredients" and the "term",
+which is "banana".
+There are 87 recipes that contain banana.
+
+Maybe you also like `cinnamon` and want to add it to the search terms.
+Now, instead of 87 you get back 2618 documents.
+Probably not what you expected.
+The reason for that is that by default the match query uses an OR as the
+operator.
+You can rewrite the `match` query using the full format and define the
+AND operator instead. Now, only 13 recipes are returned.
+
+Imagine you are looking for a Brazilian dessert.
+How would you update the query to reflect that?
+
+In Elasticsearch, you can use the Boolean query.
+It allows you to combine multiple clauses using boolean logic.
+There are four main constructs in the bool query: must, must_not, should,
+and filter.
+To answer the questions we need to use a must clause and add the existing
+match clause along with a new match clause for the Brazilian cuisine.
+
+Maybe you want the opposite, recipes that are not from Brazil.
+In this case, the match clause for banana and cinnamon stays inside the must
+and the match clause for the Brazilian cuisine goes into a must_not.
+
+////
+

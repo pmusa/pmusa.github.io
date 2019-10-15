@@ -7,29 +7,31 @@
 :toc-title:
 :toclevels: 1
 
-= Elasticsearch Queries in 15 minutes
+= Elasticsearch Queries in 15 Minutes
 
 '''
 
 == Welcome
 
-include::01_welcome.asciidoc[]
+include::00_welcome.asciidoc[]
+
+:sectnums:
 
 == Setup Elasticsearch and Kibana
 
 
-include::02_setup_ES_KB.asciidoc[]
+include::01_setup_ES_KB.asciidoc[]
 
 == Introduction to the Elasticsearch Query DSL
 
-include::03_intro_ES_queries.asciidoc[]
+include::02_intro_ES_queries.asciidoc[]
 
 == Match and Boolean Queries
 
-include::04_match_boolean_queries.asciidoc[]
+include::03_match_boolean_queries.asciidoc[]
 
 == Next Steps
 
-include::05_next_steps.asciidoc[]
+include::04_next_steps.asciidoc[]
 
 '''
